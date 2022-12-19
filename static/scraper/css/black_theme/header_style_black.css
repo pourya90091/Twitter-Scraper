@@ -1,0 +1,51 @@
+#div-header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: solid 2px white;
+    margin-bottom: 10px;
+    background-color: black;
+}
+#ul-header{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.usual{
+    float: right;
+    margin: 10px 10px 10px 0;
+}
+.usual a{
+    margin-right: 0;
+}
+.li-header{
+    float: left;
+    margin: 10px 0 10px 10px;
+}
+#ul-header li button{
+    border: solid 2px white;
+    background-color: black;
+    font-size: 20px;
+}
+#ul-header li button a{
+    text-decoration: none;
+    color: white;
+}
+#ul-header li a:hover{
+    color: gold;
+}
+#profile_image_small{
+    display: block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid 2px;
+    color: white;
+    font-size: 12px;
+}
+#profile_icon{
+    width: 40px;
+    height: 40px;
+    margin: auto;
+}

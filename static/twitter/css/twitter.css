@@ -1,0 +1,10 @@
+#tweets-container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+.tweet-container {
+    margin: 2rem 1rem;
+    border: solid 2px black;
+    padding: 10px;
+}

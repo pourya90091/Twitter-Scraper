@@ -1,0 +1,5 @@
+*.pyc
+*.enigma
+*/test/
+core/tweets/
+db.sqlite3

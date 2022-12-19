@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}Twitter{% endblock %}
+{% block header_ref %}
+    <link rel='stylesheet' href='{% static "twitter/css/twitter.css" %}' />
+{% endblock %}
+{% block body %}
+    <h1 class="title">Twitter</h1>
+    <div id="tweets-container">
+    {% for tweet in tweets %}
+        <div class="tweet-container">
+            {% if tweet.event %}
+            <span class="tweet-event">{{ tweet.event }}</span>
+            <br>
+            {% endif %}
+            <a class="tweet-owner" href="{% url 'twitter-profile' tweet.owner %}">{{ tweet.owner }}</a>
+            <span class="tweet-time">{{ tweet.time }}</span>
+            <p>{{ tweet.text }}</p>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
