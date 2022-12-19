@@ -1,6 +1,5 @@
 from initialize import driver, base_url, tweets_dir, tweets_container_xpath
 from variables import accounts
-from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 import json
 import re
 
@@ -63,7 +62,7 @@ def get_tweets() -> list:
 def get_tweet_time(tweet) -> str:
     try:
         tweet_time = tweet.find_element('xpath', './/time[@datetime]').get_attribute('datetime')
-    except (NoSuchElementException, StaleElementReferenceException):
+    except:
         tweet_time = None
     finally:
         return tweet_time
@@ -72,7 +71,7 @@ def get_tweet_time(tweet) -> str:
 def get_tweet_text(tweet) -> str:
     try:
         tweet_text = tweet.find_element('xpath', './/div[@data-testid="tweetText"]').text
-    except (NoSuchElementException, StaleElementReferenceException):
+    except:
         tweet_text = None
     finally:
         return tweet_text
@@ -81,7 +80,7 @@ def get_tweet_text(tweet) -> str:
 def get_tweet_event(tweet) -> str:
     try:
         tweet_event = tweet.find_element('xpath', './/span[contains(@id, "id__")]').text
-    except (NoSuchElementException, StaleElementReferenceException):
+    except:
         tweet_event = None
     finally:
         return tweet_event
@@ -91,7 +90,7 @@ def get_tweet_owner(tweet) -> str:
     try:
         tweet_owner = tweet.find_element('xpath', './/div[@data-testid="User-Names"]/child::div[2]').text
         tweet_owner = re.findall(r'$@(\w+)', tweet_owner)[0]
-    except (NoSuchElementException, StaleElementReferenceException):
+    except:
         tweet_owner = None
     finally:
         return tweet_owner
