@@ -26,7 +26,7 @@ SECRET_KEY = 'secret_key'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-SECRET = 'Secret'
+SECRET = 'Secret' # Secret must be a string containing English alphabets (not accept whitespace, number, etc) 
 WHITELIST = [
     'Authorized emails to getting True Rotors Config',
     ...
