@@ -1,3 +1,4 @@
+from initialize import driver
 from core import fetch_tweets
 from typing import NoReturn
 
@@ -14,3 +15,6 @@ if __name__ == '__main__':
             err = 'Interrupted'
         print('\nError:', err)
         exit()
+    finally:
+        print("\nWait for the WebDriver to quit")
+        driver.quit()
