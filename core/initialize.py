@@ -12,8 +12,6 @@ tweets_dir = f"{base_dir}/tweets"
 
 base_url = "https://twitter.com"
 
-timeout = 1
-
 tweets_container_xpath = '//div[starts-with(@aria-label, "Timeline: ") and substring-after(@aria-label, "’s") = " Tweets"]'
 
 if isdir(tweets_dir) is not True:
@@ -38,4 +36,3 @@ options.add_experimental_option("excludeSwitches", ["enable-logging"])
 options.page_load_strategy = "normal"
 
 driver = webdriver.Chrome(service=service, options=options)
-driver.implicitly_wait(timeout)

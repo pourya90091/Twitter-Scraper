@@ -89,7 +89,7 @@ def get_tweet_event(tweet) -> str:
 def get_tweet_owner(tweet) -> str:
     try:
         tweet_owner = tweet.find_element('xpath', './/div[@data-testid="User-Names"]/child::div[2]').text
-        tweet_owner = re.findall(r'$@(\w+)', tweet_owner)[0]
+        tweet_owner = re.findall(r'@(\w+)', tweet_owner)[0]
     except:
         tweet_owner = None
     finally:
