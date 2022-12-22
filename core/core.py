@@ -1,5 +1,6 @@
-from initialize import driver, base_url, tweets_dir, tweets_container_xpath
+from initialize import driver, base_url, timeout, tweets_dir, tweets_container_xpath
 from variables import accounts
+import time
 import json
 import re
 
@@ -22,6 +23,7 @@ def get_tweets() -> list:
         try:
             tweets_container = driver.find_element('xpath', tweets_container_xpath)
         except:
+            time.sleep(timeout)
             continue
         else:
             break

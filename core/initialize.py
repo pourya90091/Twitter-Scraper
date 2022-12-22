@@ -12,6 +12,8 @@ tweets_dir = f"{base_dir}/tweets"
 
 base_url = "https://twitter.com"
 
+timeout = 0.5
+
 tweets_container_xpath = '//div[starts-with(@aria-label, "Timeline: ") and substring-after(@aria-label, "’s") = " Tweets"]'
 
 if isdir(tweets_dir) is not True:
