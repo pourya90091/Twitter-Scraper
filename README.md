@@ -9,7 +9,7 @@
 ### Clone
 
 ```bash
-git clone --branch master https://github.com/pourya90091/Twitter-Scraper.git
+git clone --branch telegram_bot https://github.com/pourya90091/Twitter-Scraper.git
 ```
 
 ### Install Requirements
@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ### Config
 
-- Set web app settings at `scraper/settings.py`.
+- Set bot settings at `settings.py`.
 - Select accounts to scraping at `core/variables.py`.
 
 ### Run
