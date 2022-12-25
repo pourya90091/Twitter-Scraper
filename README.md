@@ -2,6 +2,8 @@
 
 **The Twitter Scraper project has minimal development and is very simple. It's light (to use resource).**
 
+**You can use the Core of this project in your projects as a tool for scraping.**
+
 ## Setup and Run
 
 ### Clone
